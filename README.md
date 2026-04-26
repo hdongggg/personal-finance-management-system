@@ -107,6 +107,7 @@ project DB/
 │   └── neu.sty
 │
 └── README.md
+```
 ---
 
 ## 6. File Description
@@ -282,6 +283,7 @@ Open the project folder in VS Code or another code editor.
 ```bash
 pip install mysql-connector-python
 pip install matplotlib
+```
 
 ### Step 3: Configure database connection
 Open `python/db.py` and update the MySQL connection settings:
@@ -293,7 +295,7 @@ connection = mysql.connector.connect(
     password="YOUR_PASSWORD",
     database="PersonalFinanceDB"
 )
-
+```
 ### Step 4: Create and initialize the database
 
 Run the SQL files in this order inside MySQL Workbench:
