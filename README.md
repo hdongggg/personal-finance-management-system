@@ -172,7 +172,7 @@ Created for educational purposes at **National Economics University (NEU)**.
 
 ## 👤 Author
 
-**Đông** - National Economics University
+**Mai Huy Đông** - National Economics University
 
 ---
 
