@@ -1,14 +1,15 @@
 USE PersonalFinanceDB;
-
+DROP view if exists monthlysummaryview;
 CREATE VIEW MonthlySummaryView AS
 SELECT 
     u.UserID,
     u.UserName,
-    SummaryYear,
-    SummaryMonth,
-    SUM(TotalIncome) AS TotalIncome,
-    SUM(TotalExpense) AS TotalExpense,
-    SUM(TotalIncome) - SUM(TotalExpense) AS NetAmount
+	CONCAT(CombinedData.SummaryYear, '-', LPAD(CombinedData.SummaryMonth, 2, '0')) AS YearMonth,
+    CombinedData.SummaryYear,
+    CombinedData.SummaryMonth,
+    SUM(CombinedData.TotalIncome) AS TotalIncome,
+    SUM(CombinedData.TotalExpense) AS TotalExpense,
+    SUM(CombinedData.TotalIncome) - SUM(CombinedData.TotalExpense) AS NetAmount
 FROM Users u
 JOIN (
     SELECT 

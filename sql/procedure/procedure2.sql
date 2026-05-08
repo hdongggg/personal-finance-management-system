@@ -16,5 +16,3 @@ BEGIN
 END $$
 
 DELIMITER ;
-CALL AddExpenseProc(1, 1, 1, 75000.00, '2026-04-21', 'Lunch');
-SELECT * FROM Expenses
